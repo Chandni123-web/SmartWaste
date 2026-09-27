@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Waste Scanner | Smart Waste</title>
+
+    <link rel="stylesheet" href="classifier.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="logo">
+            ♻️ <span>Smart</span>Waste
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="classifier.html" class="active">AI Scanner</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <a href="index.html" class="back-home">
+            ← Home
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="scanner-page">
+
+            <!-- FLOATING DOODLES -->
+
+            <div class="floating-item item-1">♻️</div>
+            <div class="floating-item item-2">🌱</div>
+            <div class="floating-item item-3">🍃</div>
+            <div class="floating-item item-4">✨</div>
+            <div class="floating-item item-5">🧴</div>
+            <div class="floating-item item-6">🍌</div>
+
+
+            <!-- HEADING -->
+
+            <div class="scanner-heading">
+
+                <div class="ai-badge">
+                    <span class="pulse-dot"></span>
+                    AI WASTE SCANNER
+                </div>
+
+                <h1>
+                    Give your waste a<br>
+                    <span>smarter destination.</span>
+                </h1>
+
+                <p>
+                    Snap it. Scan it. Sort it. ♻️
+                    <br>
+                    Let Smart Waste help you decide where it belongs.
+                </p>
+
+            </div>
+
+
+            <!-- SCANNER AREA -->
+
+            <div class="scanner-layout">
+
+
+                <!-- LEFT: UPLOAD -->
+
+                <div class="scanner-card">
+
+                    <div class="card-top">
+
+                        <div>
+                            <span class="tiny-label">
+                                SMART VISION
+                            </span>
+
+                            <h2>
+                                Scan your waste
+                            </h2>
+                        </div>
+
+                        <div class="ai-icon">
+                            🤖
+                        </div>
+
+                    </div>
+
+
+                    <!-- UPLOAD AREA -->
+
+                    <label for="wasteImage" class="drop-zone">
+
+                        <div class="scan-circle">
+
+                            <div class="scan-ring"></div>
+
+                            <div class="camera-icon">
+                                📸
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Drop your waste photo here
+                        </h3>
+
+                        <p>
+                            or click to browse from your device
+                        </p>
+
+                        <div class="choose-button">
+                            Choose Image →
+                        </div>
+
+                        <small>
+                            JPG, PNG or JPEG • Max 10 MB
+                        </small>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="wasteImage"
+                        accept="image/*"
+                    >
+
+
+                    <!-- IMAGE PREVIEW -->
+
+                    <div id="preview"></div>
+
+
+                    <!-- SCANNING STATUS -->
+
+                    <div class="scan-status" id="scanStatus">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            AI Vision System Ready
+                        </span>
+
+                        <strong>
+                            ● LIVE
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT: AI INFO -->
+
+                <div class="ai-side">
+
+
+                    <div class="ai-card">
+
+                        <div class="sparkle">
+                            ✨
+                        </div>
+
+                        <span class="tiny-label">
+                            HOW SMART WASTE HELPS
+                        </span>
+
+                        <h2>
+                            From confusion<br>
+                            to <span>correct sorting.</span>
+                        </h2>
+
+                        <div class="mini-step">
+
+                            <div class="mini-number">
+                                01
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Upload
+                                </strong>
+
+                                <p>
+                                    Take or select a photo
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="mini-step">
+
+                            <div class="mini-number">
+                                02
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Identify
+                                </strong>
+
+                                <p>
+                                    AI analyses the waste
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mini-step">
+
+                            <div class="mini-number">
+                                03
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Sort
+                                </strong>
+
+                                <p>
+                                    Follow the disposal advice
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tip-card">
+
+                        <div class="tip-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Small choice. Big impact.
+                            </strong>
+
+                            <p>
+                                Proper segregation helps recover
+                                more recyclable material.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <section class="result-section" id="resultCard">
+
+                <div class="result-heading">
+
+                    <div>
+                        <span class="tiny-label">
+                            AI ANALYSIS
+                        </span>
+
+                        <h2>
+                            Here's what we found 👀
+                        </h2>
+                    </div>
+
+                    <div class="analyzed-badge">
+                        ✓ ANALYZED
+                    </div>
+
+                </div>
+
+
+                <div class="result-grid">
+
+
+                    <!-- RESULT IMAGE -->
+
+                    <div class="result-image-box">
+
+                        <div id="resultImage">
+                            🧴
+                        </div>
+
+                        <div class="scan-overlay">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULT DETAILS -->
+
+                    <div class="result-details">
+
+                        <span class="detected-label">
+                            DETECTED WASTE
+                        </span>
+
+                        <h3>
+                            Plastic Bottle
+                        </h3>
+
+                        <div class="confidence">
+
+                            <div class="confidence-text">
+
+                                <span>
+                                    AI CONFIDENCE
+                                </span>
+
+                                <strong>
+                                    98%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+                                <div></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="category">
+
+                            <div class="category-icon">
+                                ♻️
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    RECOMMENDED CATEGORY
+                                </small>
+
+                                <strong>
+                                    Recyclable Waste
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="disposal-tip">
+
+    <span>
+        💡
+    </span>
+
+    <p>
+        Empty and rinse the item before
+        placing it in the appropriate waste stream.
+    </p>
+
+</div>
+
+<!-- SMART DISPOSAL ACTION -->
+
+<div class="disposal-action">
+
+    <button
+        type="button"
+        id="findCentersBtn"
+        class="find-centers-btn"
+    >
+        📍 Find Nearby Collection Centers →
+    </button>
+
+    <p id="locationStatus">
+        Find suitable disposal locations near you.
+    </p>
+
+</div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTTOM CATEGORIES -->
+
+            <section class="category-section">
+
+                <div class="category-title">
+
+                    <span>
+                        KNOW YOUR WASTE
+                    </span>
+
+                    <h2>
+                        Four categories.<br>
+                        <span>One cleaner planet.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="category-cards">
+
+                    <div class="category-card organic-card">
+
+                        <div>
+                            🍎
+                        </div>
+
+                        <strong>
+                            Organic
+                        </strong>
+
+                        <p>
+                            Food & biodegradable
+                        </p>
+
+                    </div>
+
+
+                    <div class="category-card recycle-card">
+
+                        <div>
+                            🧴
+                        </div>
+
+                        <strong>
+                            Recyclable
+                        </strong>
+
+                        <p>
+                            Plastic, paper & glass
+                        </p>
+
+                    </div>
+
+
+                    <div class="category-card e-waste-card">
+
+                        <div>
+                            📱
+                        </div>
+
+                        <strong>
+                            E-Waste
+                        </strong>
+
+                        <p>
+                            Electronics & batteries
+                        </p>
+
+                    </div>
+
+
+                    <div class="category-card hazard-card">
+
+                        <div>
+                            🧪
+                        </div>
+
+                        <strong>
+                            Hazardous
+                        </strong>
+
+                        <p>
+                            Handle with care
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ♻️ SmartWaste
+        </div>
+
+        <p>
+            AI-powered waste management for a cleaner tomorrow.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="classifier.html">
+                AI Scanner
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+        <small>
+            © 2026 Smart Waste • Team Void Coders
+        </small>
+
+    </footer>
+
+<!-- AI MODEL + SCANNER SCRIPT -->
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js"></script>
+<script src="classifier.js"></script>
+
+</body>
+
+</html>

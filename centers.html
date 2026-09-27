@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nearby Collection Centers | SmartWaste</title>
+
+    <link
+        rel="stylesheet"
+        href="centers.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="logo">
+            ♻️ <span>Smart</span>Waste
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="classifier.html">
+                AI Scanner
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </nav>
+
+        <a
+            href="classifier.html"
+            class="back-home"
+        >
+            ← Scanner
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <section class="centers-page">
+
+            <div class="centers-heading">
+
+                <span class="tiny-label">
+                    SMART DISPOSAL
+                </span>
+
+                <h1>
+                    Find a suitable
+                    <span>collection center.</span>
+                </h1>
+
+                <p>
+                    We'll use your current location to
+                    find suitable disposal options nearby.
+                </p>
+
+            </div>
+
+
+            <!-- WASTE INFORMATION -->
+
+            <div class="waste-summary">
+
+                <div class="summary-icon">
+                    ♻️
+                </div>
+
+                <div>
+
+                    <small>
+                        WASTE TO DISPOSE
+                    </small>
+
+                    <h2 id="wasteType">
+                        Recyclable / Dry Waste
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOCATION BUTTON -->
+
+            <div class="location-card">
+
+                <div class="location-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3>
+                        Use my current location
+                    </h3>
+
+                    <p id="locationMessage">
+                        Your location will only be
+                        accessed after you give permission.
+                    </p>
+
+                </div>
+
+                <button
+                    id="locationBtn"
+                    type="button"
+                >
+                    Allow Location
+                </button>
+
+            </div>
+
+
+            <!-- RESULTS -->
+            <div id="centersMap" class="centers-map">
+    <div class="map-placeholder">
+        📍 Allow location to see nearby centers on the map
+    </div>
+</div>
+            <section
+                class="centers-results"
+                id="centersResults"
+            >
+
+                <div class="results-header">
+
+                    <div>
+
+                        <span>
+                            NEARBY OPTIONS
+                        </span>
+
+                        <h2>
+                            Suitable places
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="resultCount"
+                        class="result-count"
+                    >
+                        0 found
+                    </div>
+
+                </div>
+
+
+                <!-- CENTER LIST -->
+
+                <div
+                    id="centerList"
+                    class="center-list"
+                >
+
+                    <div class="empty-state">
+
+                        <div>
+                            📍
+                        </div>
+
+                        <h3>
+                            Location required
+                        </h3>
+
+                        <p>
+                            Allow location access to
+                            discover nearby options.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ♻️ SmartWaste
+        </div>
+
+        <p>
+            Smarter disposal for a cleaner tomorrow.
+        </p>
+
+        <small>
+            © 2026 Smart Waste • Team Void Coders
+        </small>
+
+    </footer>
+
+
+    <script>
+    (g => {
+        var h, a, k,
+            p = "The Google Maps JavaScript API",
+            c = "google",
+            l = "importLibrary",
+            q = "__ib__",
+            m = document,
+            b = window;
+
+        b = b[c] || (b[c] = {});
+
+        var d = b.maps || (b.maps = {}),
+            r = new Set,
+            e = new URLSearchParams,
+
+            u = () =>
+                h ||
+                (h = new Promise(async (f, n) => {
+
+                    await (a = m.createElement("script"));
+
+                    e.set(
+                        "libraries",
+                        [...r] + ""
+                    );
+
+                    for (k in g) {
+                        e.set(
+                            k.replace(
+                                /[A-Z]/g,
+                                t => "_" + t[0].toLowerCase()
+                            ),
+                            g[k]
+                        );
+                    }
+
+                    e.set(
+                        "callback",
+                        c + ".maps." + q
+                    );
+
+                    a.src =
+                        `https://maps.${c}apis.com/maps/api/js?${e}`;
+
+                    d[q] = f;
+
+                    a.onerror = () =>
+                        n(
+                            Error(
+                                p + " could not load."
+                            )
+                        );
+
+                    a.nonce =
+                        m.querySelector(
+                            "script[nonce]"
+                        )?.nonce || "";
+
+                    m.head.append(a);
+
+                }));
+
+        d[l]
+            ? console.warn(
+                p +
+                " only loads once. Ignoring:",
+                g
+            )
+            : d[l] =
+                (f, ...n) =>
+                    r.add(f) &&
+                    u().then(
+                        () => d[l](f, ...n)
+                    );
+
+    })({
+
+        key: "AIzaSyAjCGqu9JiqD4YZeCDQWYrXa8s9YqTqTkc",
+        v: "weekly",
+        libraries: ["marker"]
+
+    });
+</script>
+
+<script src="centers.js"></script>
+
+</body>
+
+</html>

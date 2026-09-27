@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartWaste | India Command Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="brand">
+        <div class="brand-icon">♻️</div>
+
+        <div>
+            <h2>SmartWaste</h2>
+            <span>AI • CLEAN • CONNECTED</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="classifier.html">AI Scanner</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        System Online
+    </div>
+
+</header>
+
+
+<!-- ================= DASHBOARD HERO ================= -->
+
+<main>
+
+<section class="dashboard-hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            🇮🇳 NATIONAL SMART WASTE MONITORING
+        </div>
+
+        <h1>
+            India's Waste
+            <span>Command Center</span>
+        </h1>
+
+        <p>
+            AI-powered monitoring for smarter segregation,
+            collection, routing and citizen participation.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="classifier.html" class="primary-btn">
+                🤖 Scan Waste
+            </a>
+
+            <button class="secondary-btn" onclick="scrollToSection('analytics')">
+                📊 View Analytics
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- INDIA VISUAL -->
+
+    <div class="india-visual">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="india-circle">
+
+            <div class="india-flag">🇮🇳</div>
+
+            <strong>INDIA</strong>
+
+            <span>SMART WASTE NETWORK</span>
+
+        </div>
+
+        <div class="floating-badge badge-one">
+            ♻️ <b>4</b> Streams
+        </div>
+
+        <div class="floating-badge badge-two">
+            🤖 AI Enabled
+        </div>
+
+        <div class="floating-badge badge-three">
+            🚛 Smart Routes
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= NATIONAL DATA ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">NATIONAL OVERVIEW</span>
+
+            <h2>Waste Management at a Glance</h2>
+
+            <p>
+                According to recent national data
+            </p>
+        </div>
+
+        <div class="live-pill">
+            <span></span>
+            LIVE MONITORING
+        </div>
+
+    </div>
+
+
+    <div class="stat-grid">
+
+        <div class="stat-card green">
+            <div class="stat-icon">🗑️</div>
+            <span>Waste Generated</span>
+            <strong>1.62 Lakh</strong>
+            <small>Tonnes / Day</small>
+
+            <div class="mini-line"></div>
+        </div>
+
+
+        <div class="stat-card blue">
+            <div class="stat-icon">♻️</div>
+            <span>Waste Processed</span>
+            <strong>1.31 Lakh</strong>
+            <small>Tonnes / Day</small>
+
+            <div class="mini-line"></div>
+        </div>
+
+
+        <div class="stat-card purple">
+            <div class="stat-icon">📈</div>
+            <span>Processing Rate</span>
+            <strong>82%</strong>
+            <small>National Processing</small>
+
+            <div class="progress">
+                <div style="width:82%"></div>
+            </div>
+        </div>
+
+
+        <div class="stat-card orange">
+            <div class="stat-icon">🚛</div>
+            <span>Door-to-Door</span>
+            <strong>98%</strong>
+            <small>Collection Coverage</small>
+
+            <div class="progress">
+                <div style="width:98%"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOUR STREAMS ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">SMART SEGREGATION</span>
+
+            <h2>Four Waste Streams</h2>
+
+            <p>
+                The system organizes waste into four mandatory streams.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="stream-grid">
+
+        <div class="stream-card wet">
+
+            <div class="stream-icon">🌱</div>
+
+            <div>
+                <span>STREAM 01</span>
+                <h3>Wet Waste</h3>
+                <p>
+                    Food waste, kitchen waste and biodegradable material.
+                </p>
+            </div>
+
+            <button onclick="showInfo('Wet Waste','Organic waste can be directed toward composting and other biological processing routes.')">
+                Explore →
+            </button>
+
+        </div>
+
+
+        <div class="stream-card dry">
+
+            <div class="stream-icon">♻️</div>
+
+            <div>
+                <span>STREAM 02</span>
+                <h3>Dry Waste</h3>
+                <p>
+                    Paper, plastic, metal, glass and other recyclables.
+                </p>
+            </div>
+
+            <button onclick="showInfo('Dry Waste','AI-assisted classification can help identify recyclable materials and improve sorting quality.')">
+                Explore →
+            </button>
+
+        </div>
+
+
+        <div class="stream-card sanitary">
+
+            <div class="stream-icon">🧤</div>
+
+            <div>
+                <span>STREAM 03</span>
+                <h3>Sanitary Waste</h3>
+                <p>
+                    Sanitary products requiring separate handling.
+                </p>
+            </div>
+
+            <button onclick="showInfo('Sanitary Waste','Sanitary waste should be kept separate to support safer handling and appropriate treatment.')">
+                Explore →
+            </button>
+
+        </div>
+
+
+        <div class="stream-card special">
+
+            <div class="stream-icon">⚠️</div>
+
+            <div>
+                <span>STREAM 04</span>
+                <h3>Special Care</h3>
+                <p>
+                    Waste requiring special handling and precautions.
+                </p>
+            </div>
+
+            <button onclick="showInfo('Special Care Waste','Special-care waste is identified separately so that collection and treatment can follow appropriate safety procedures.')">
+                Explore →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ANALYTICS ================= -->
+
+<section class="section" id="analytics">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">ANALYTICS ENGINE</span>
+
+            <h2>Smart Waste Analytics</h2>
+
+            <p>
+                A visual overview of collection, processing and system targets.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="analytics-grid">
+
+
+        <!-- PROCESSING -->
+
+        <div class="analytics-card processing-card">
+
+            <div class="card-title">
+
+                <div>
+                    <span>PROCESSING</span>
+                    <h3>Waste Processing</h3>
+                </div>
+
+                <div class="circle-icon">♻️</div>
+
+            </div>
+
+
+            <div class="donut">
+
+                <div class="donut-inner">
+                    <strong>82%</strong>
+                    <span>Processed</span>
+                </div>
+
+            </div>
+
+
+            <div class="legend">
+
+                <div>
+                    <span class="legend-dot processed"></span>
+                    Processed
+                    <b>82%</b>
+                </div>
+
+                <div>
+                    <span class="legend-dot remaining"></span>
+                    Remaining
+                    <b>18%</b>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COLLECTION -->
+
+        <div class="analytics-card">
+
+            <div class="card-title">
+
+                <div>
+                    <span>COLLECTION NETWORK</span>
+                    <h3>Door-to-Door Coverage</h3>
+                </div>
+
+                <div class="circle-icon">🚛</div>
+
+            </div>
+
+
+            <div class="big-percentage">
+                98%
+            </div>
+
+            <div class="large-progress">
+                <div style="width:98%"></div>
+            </div>
+
+            <div class="metric-row">
+                <span>Collection coverage</span>
+                <b>98%</b>
+            </div>
+
+            <div class="metric-row">
+                <span>Smart routing target</span>
+                <b>28–32%</b>
+            </div>
+
+        </div>
+
+
+        <!-- AI -->
+
+        <div class="analytics-card ai-card">
+
+            <div class="card-title">
+
+                <div>
+                    <span>AI VISION</span>
+                    <h3>Segregation Intelligence</h3>
+                </div>
+
+                <div class="circle-icon">🤖</div>
+
+            </div>
+
+
+            <div class="ai-score">
+                <strong>75–85%</strong>
+                <span>Purity Target</span>
+            </div>
+
+            <div class="ai-bars">
+
+                <div>
+                    <span>Plastic</span>
+                    <div><i style="width:88%"></i></div>
+                </div>
+
+                <div>
+                    <span>Paper</span>
+                    <div><i style="width:81%"></i></div>
+                </div>
+
+                <div>
+                    <span>Organic</span>
+                    <div><i style="width:76%"></i></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SMART ROUTING ================= -->
+
+<section class="section">
+
+    <div class="route-panel">
+
+        <div class="route-content">
+
+            <span class="section-label">SMART ROUTING ENGINE</span>
+
+            <h2>
+                Every Route.
+                <span>Smarter.</span>
+            </h2>
+
+            <p>
+                Our proposed system uses intelligent route planning
+                to reduce unnecessary travel, fuel consumption and
+                collection delays.
+            </p>
+
+
+            <div class="route-stats">
+
+                <div>
+                    <strong>28–32%</strong>
+                    <span>Fuel / Trip Reduction Target</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Route Monitoring</span>
+                </div>
+
+                <div>
+                    <strong>AI</strong>
+                    <span>Dynamic Optimization</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="route-map">
+
+            <div class="map-grid"></div>
+
+            <div class="route-line line-a"></div>
+            <div class="route-line line-b"></div>
+            <div class="route-line line-c"></div>
+
+            <div class="map-node node-a">🏠</div>
+            <div class="map-node node-b">🚛</div>
+            <div class="map-node node-c">♻️</div>
+            <div class="map-node node-d">🏭</div>
+
+            <div class="route-center">
+                AI
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SYSTEM FEATURES ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">SMART ECOSYSTEM</span>
+            <h2>One Platform. Multiple Systems.</h2>
+        </div>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <button class="feature-card" onclick="showInfo('AI Waste Scanner','Upload a waste image and the prototype demonstrates AI-assisted waste classification and disposal guidance.')">
+
+            <div class="feature-icon">🤖</div>
+
+            <h3>AI Waste Scanner</h3>
+
+            <p>
+                Identify waste categories through image-based classification.
+            </p>
+
+            <span>Open Scanner →</span>
+
+        </button>
+
+
+        <button class="feature-card" onclick="showInfo('Smart Routing','The proposed routing module can use collection locations and vehicle availability to generate optimized routes.')">
+
+            <div class="feature-icon">🗺️</div>
+
+            <h3>Smart Routing</h3>
+
+            <p>
+                Plan efficient collection routes and reduce unnecessary travel.
+            </p>
+
+            <span>Explore Routes →</span>
+
+        </button>
+
+
+        <button class="feature-card" onclick="showInfo('Citizen Connect','Citizens can report waste-related problems and monitor grievance status through the proposed system.')">
+
+            <div class="feature-icon">📱</div>
+
+            <h3>Citizen Connect</h3>
+
+            <p>
+                Report issues, track complaints and improve civic participation.
+            </p>
+
+            <span>View Citizen Panel →</span>
+
+        </button>
+
+
+        <button class="feature-card" onclick="showInfo('Impact Monitor','Track environmental and operational indicators such as processing, recovery and route efficiency.')">
+
+            <div class="feature-icon">🌍</div>
+
+            <h3>Impact Monitor</h3>
+
+            <p>
+                Visualize the environmental and operational impact of the system.
+            </p>
+
+            <span>View Impact →</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT TARGETS ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">PROPOSED SYSTEM TARGETS</span>
+
+            <h2>What SmartWaste Aims to Improve</h2>
+
+            <p>
+                These figures represent proposed project targets,
+                not measured national outcomes.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="target-grid">
+
+        <div class="target-card">
+            <div>🚛</div>
+            <strong>28–32%</strong>
+            <span>Fuel / Trip Reduction</span>
+        </div>
+
+        <div class="target-card">
+            <div>🎯</div>
+            <strong>75–85%</strong>
+            <span>Segregation Purity</span>
+        </div>
+
+        <div class="target-card">
+            <div>💰</div>
+            <strong>2.2×</strong>
+            <span>Salvage Resale Yield</span>
+        </div>
+
+        <div class="target-card">
+            <div>🛡️</div>
+            <strong>70%</strong>
+            <span>Hazard Exposure Reduction</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ALERT CENTER ================= -->
+
+<section class="section">
+
+    <div class="alert-panel">
+
+        <div class="alert-heading">
+
+            <div>
+                <span class="section-label">SYSTEM MONITOR</span>
+                <h2>Smart Alerts</h2>
+            </div>
+
+            <span class="alert-live">
+                ● SYSTEM ACTIVE
+            </span>
+
+        </div>
+
+
+        <div class="alerts">
+
+            <div class="alert-item">
+                <div class="alert-icon green-alert">✓</div>
+
+                <div>
+                    <strong>Collection network operational</strong>
+                    <span>Monitoring active across connected zones</span>
+                </div>
+
+                <b>ACTIVE</b>
+            </div>
+
+
+            <div class="alert-item">
+                <div class="alert-icon blue-alert">AI</div>
+
+                <div>
+                    <strong>AI classification engine ready</strong>
+                    <span>Waiting for waste image input</span>
+                </div>
+
+                <b>READY</b>
+            </div>
+
+
+            <div class="alert-item">
+                <div class="alert-icon orange-alert">!</div>
+
+                <div>
+                    <strong>Segregation awareness required</strong>
+                    <span>Improve source-level waste segregation</span>
+                </div>
+
+                <b>NOTICE</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final-cta">
+
+    <div class="cta-doodle doodle-left">♻️</div>
+    <div class="cta-doodle doodle-right">🌱</div>
+
+    <span>BUILDING A CLEANER TOMORROW</span>
+
+    <h2>
+        Turn Waste Into
+        <span>Smart Action.</span>
+    </h2>
+
+    <p>
+        From waste identification to collection and citizen engagement,
+        SmartWaste connects the complete waste-management journey.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a href="classifier.html" class="primary-btn">
+            🤖 Try AI Scanner
+        </a>
+
+        <a href="index.html" class="secondary-btn">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= INFO POPUP ================= -->
+
+<div class="modal" id="infoModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" onclick="closeInfo()">×</button>
+
+        <div class="modal-icon">♻️</div>
+
+        <h2 id="modalTitle">SmartWaste</h2>
+
+        <p id="modalText"></p>
+
+        <button class="primary-btn" onclick="closeInfo()">
+            Got it ✓
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function showInfo(title, text) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalText").innerText = text;
+    document.getElementById("infoModal").classList.add("show");
+}
+
+
+function closeInfo() {
+
+    document.getElementById("infoModal").classList.remove("show");
+}
+
+
+function scrollToSection(id) {
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+window.onclick = function(event) {
+
+    const modal = document.getElementById("infoModal");
+
+    if (event.target === modal) {
+        closeInfo();
+    }
+
+};
+
+</script>
+
+</body>
+</html>
